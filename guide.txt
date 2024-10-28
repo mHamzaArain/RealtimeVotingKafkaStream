@@ -1,0 +1,39 @@
+
+
+Check skala and pyspark version
+
+spark-shell
+
+
+
+
+### Kafka 
+
+## List all topics
+kafka-topics --list --bootstrap-server broker:29092
+
+## Consume topic screen
+kafka-console-consumer --topic aggregated_votes_per_candidate --bootstrap-server broker:29092
+
+## Delete topic
+kafka-topics --delete --topic aggregated_votes_per_candidate --bootstrap-server broker:29092
+
+
+
+
+### POSTGRESS
+
+## drop tables
+psql -U postgres
+
+## list databases  
+\list
+
+# Select database
+\c voting
+
+# All tables
+\dt
+
+## drop tables
+DROP TABLE candidates, voters, votes;
